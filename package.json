@@ -10,7 +10,8 @@
     "build:ui": "rm -rf build && cd ../fullstackopen/osa2/puhelinluettelo && npm run build --prod && cp -r build ../../../fullstackopen_puhelinluettelo_backend/",
     "deploy": "git push heroku master",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "author": "Mauri Leino",
   "license": "ISC",
@@ -23,6 +24,12 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
     "nodemon": "^2.0.4"
   }
 }

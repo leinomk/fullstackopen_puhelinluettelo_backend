@@ -6,7 +6,7 @@ mongoose.set('useFindAndModify', false)
 const url = process.env.MONGODB_URI
 
 console.log('connecting to MongoDB')
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true , useCreateIndex: true})
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true , useCreateIndex: true })
   .then(result => {
     console.log('connected to MongoDB')
   })
@@ -15,7 +15,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true , useCre
   })
 
 const personSchema = new mongoose.Schema({
-  name: { 
+  name: {
     type: String,
     minlength: 3,
     required: true,
