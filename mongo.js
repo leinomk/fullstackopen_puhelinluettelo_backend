@@ -32,10 +32,17 @@ const AddPerson = () => {
     number: `${number}`
   })
 
-  person.save().then(response => {
-    console.log(`added ${name} number ${number} to phonebook`)
-    mongoose.connection.close()
-  })
+  person.save()
+    .then(response => {
+      console.log(`added ${name} number ${number} to phonebook`)
+      mongoose.connection.close()
+    })
+    .catch(error => {
+      console.log('------------')
+      console.log(`${error.message}`)
+      console.log('------------')
+      mongoose.connection.close()
+    })
 }
 
 const PrintPeople = () => {

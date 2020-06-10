@@ -106,3 +106,7 @@ dist
 
 # Test requests
 /requests
+
+#ESlint
+.eslintrc.js
+.eslintignore
